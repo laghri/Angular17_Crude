@@ -29,27 +29,17 @@ import { MatFormField } from '@angular/material/form-field';
     MatSnackBarModule,
     MatFormField
   ],
-  providers:[EmployeServiceService],
+  providers:[],
   templateUrl: './employe.component.html',
   styleUrl: './employe.component.css'
 })
 export class EmployeComponent {
   errorMessage: string="";
-  constructor(private service: EmployeServiceService,private dialog: MatDialog) {
 
-   }
-
+  constructor(private service: EmployeServiceService,private dialog: MatDialog) {}
 
 
-  Employes=this.service.Employes;
-
-//   ngOnInit(): void {
-
-
-// console.log(this.Employes())
-//   }
-
-
+   employes= this.service.Employes;
 
 
   openDeleteDialog(EmployeId: string) {
@@ -59,7 +49,7 @@ export class EmployeComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        // Delete the vehicle with the provided ID
+
 
       }
     });
@@ -72,8 +62,7 @@ export class EmployeComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        // Update the vehicle with the provided ID
-        // this.editVehicle(vehicleId, result);
+
       }
     });
   }

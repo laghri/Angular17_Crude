@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class EmployeServiceService {
 
   private   apiBaseUrl="https://localhost:7223";
-  private Employee$ = this.http.get<Employe[]>(`${this.apiBaseUrl}/api/Employes`);
+  private employee$ = this.http.get<Employe[]>(`${this.apiBaseUrl}/api/Employes`);
 
   Employes: WritableSignal<Employe[]> = signal([]);
   EmployeGetted: WritableSignal<Employe| undefined> = signal(undefined);
   constructor(private http: HttpClient) {
-    this.Employee$.subscribe((NewEmploye) => {
+    this.employee$.subscribe((NewEmploye) => {
       this.Employes.set(NewEmploye);
     });
   }
