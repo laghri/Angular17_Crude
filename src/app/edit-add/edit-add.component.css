@@ -1,0 +1,29 @@
+.content {
+  padding-top: 10px;
+}
+.mat-dialog-title{
+  margin: 100px
+}
+.row {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mat-form-field {
+    width: 100px;
+  }
+
+.mat-form-field{
+  margin-bottom: 10px;
+}
+.action {
+  padding: 0px 25px 20px;
+}
+.button {
+    flex: 1;
+    margin-right: 2px;
+  }
+.title{
+  margin: 10px 0px 5px 20px;
+}

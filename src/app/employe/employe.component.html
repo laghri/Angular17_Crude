@@ -1,0 +1,38 @@
+<table class="table">
+  <!-- Table header -->
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>salaire</th>
+      <th>Specialite</th>
+      <th >Action</th>
+    </tr>
+  </thead>
+  <!-- Table body -->
+  <tbody>
+    @for (item of Employes(); track item.id) {
+
+      <tr>
+
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.salaire}}</td>
+        <td>{{item.specialite }}</td>
+
+
+
+        <!-- Delete button -->
+        <td class="action">
+          <!-- Delete button with confirmation dialog -->
+          <button class="btn btn-danger" (click)="openDeleteDialog(item.id)">Delete</button>
+          <!-- Edit button with edit prompt dialog -->
+          <button class="btn btn-primary" (click)="openEdiForm(item)">Edit</button>
+        </td>
+
+
+    </tr>
+    }
+
+  </tbody>
+</table>

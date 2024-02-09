@@ -1,0 +1,56 @@
+<div mat-dialog-title class="title">
+  <h1>{{data ? 'Update Employee':'Add Employee'}}</h1>
+</div>
+<form [formGroup]="EmployeForm" (ngSubmit)="OnSubmitForm()" >
+  <div mat-dialog-content class="content">
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput type="text" placeholder="Name" formControlName="name">
+
+             @if (hasError('name', 'required')) {
+                  <mat-error >name is required</mat-error>
+                }
+                @if (hasError('name', 'minLength')) {
+                  <mat-error >Name must be at least 4 characters</mat-error>
+                }
+
+
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Salaire</mat-label>
+              <input matInput placeholder="Salaire" formControlName="salaire" type="number">
+              @if (hasError('salaire', 'required') ) {
+                <mat-error >salaire is required</mat-error>
+
+              }
+              @if (hasError('salaire', 'salaryError')) {
+                <mat-error >Salaire must be more than 3000</mat-error>
+              }
+
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Specialite</mat-label>
+            <input matInput placeholder="Specialite" formControlName="specialite">
+            @if (hasError('specialite', 'required')) {
+              <mat-error >specialite is required</mat-error>
+            }
+            @if (hasError('specialite', 'minLength')) {
+              <mat-error >4 characters</mat-error>
+            }
+
+        </mat-form-field>
+      </div>
+
+
+
+
+
+
+
+  <div mat-dialog-actions class="action">
+      <button mat-raised-button type="button"  (click)="Close()">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">{{data ? 'Update':'Save'}}</button>
+  </div>
+</div>
+</form>

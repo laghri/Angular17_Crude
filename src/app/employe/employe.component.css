@@ -1,0 +1,19 @@
+.table
+{
+  max-width: 1600px;
+  margin:60px auto;
+}
+.action{
+  margin: auto;
+  display: flex;
+
+}
+.btn-danger{
+  margin-right: 4px;
+  margin-bottom: 3px;
+  width: 80px;
+}
+.btn-primary  {
+  width: 80px;
+  margin-bottom: 3px;
+}

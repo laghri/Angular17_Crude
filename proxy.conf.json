@@ -1,0 +1,7 @@
+{
+  "/*": {
+    "target": "https://localhost:7223",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
